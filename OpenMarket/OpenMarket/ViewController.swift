@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     let listView = ListViewController()
     let collectionView = CollectionViewController()
     let segmentedControl: UISegmentedControl = {
@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configureNavigationBar()
-        configureSegmentedControl()
         addChildView()
     }
     
@@ -34,30 +33,18 @@ class ViewController: UIViewController {
         self.view.addSubview(listView.view)
         self.view.addSubview(collectionView.view)
         
-        configureTableContainerConstraint(for: listView.view)
-        configureTableContainerConstraint(for: collectionView.view)
+        configureConstraintToSafeArea(for: listView.view)
+        configureConstraintToSafeArea(for: collectionView.view)
     }
     
     private func configureNavigationBar() {
+        configureSegmentedControl()
         navigationItem.titleView = segmentedControl
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
     }
 
     private func configureSegmentedControl() {
         segmentedControl.addTarget(self, action: #selector(changeViewStyle(_ :)), for: .valueChanged)
-    }
-    
-    private func configureTableContainerConstraint(for container: UIView) {
-        container.translatesAutoresizingMaskIntoConstraints = false
-        let safeArea = view.safeAreaLayoutGuide
-        view.addSubview(container)
-        
-        NSLayoutConstraint.activate([
-            container.topAnchor.constraint(equalTo: safeArea.topAnchor),
-            container.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
-            container.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
-        ])
     }
     
     @objc private func changeViewStyle(_ sender: UISegmentedControl) {
@@ -68,6 +55,21 @@ class ViewController: UIViewController {
             listView.view.isHidden = true
             collectionView.view.isHidden = false
         }
+    }
+}
+
+extension UIViewController {
+    func configureConstraintToSafeArea(for ojbect: UIView) {
+        ojbect.translatesAutoresizingMaskIntoConstraints = false
+        let safeArea = view.safeAreaLayoutGuide
+        view.addSubview(ojbect)
+        
+        NSLayoutConstraint.activate([
+            ojbect.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            ojbect.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            ojbect.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+            ojbect.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
+        ])
     }
 }
 
