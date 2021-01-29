@@ -7,19 +7,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    let tableContainer: UIView = {
-        let containerView = UIView()
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        return containerView
-    }()
-    
-    let collectionContainer: UIView = {
-        let containerView = UIView()
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        return containerView
-    }()
-    
+    let listView = ListViewController()
+    let collectionView = CollectionViewController()
     let segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl()
         segmentedControl.insertSegment(withTitle: "LIST", at: 0, animated: true)
@@ -35,14 +24,23 @@ class ViewController: UIViewController {
         
         configureNavigationBar()
         configureSegmentedControl()
-        configureTableContainerConstraint(for: tableContainer)
-        configureTableContainerConstraint(for: collectionContainer)
+        addChildView()
+    }
+    
+    private func addChildView() {
+        addChild(listView)
+        addChild(collectionView)
+        
+        self.view.addSubview(listView.view)
+        self.view.addSubview(collectionView.view)
+        
+        configureTableContainerConstraint(for: listView.view)
+        configureTableContainerConstraint(for: collectionView.view)
     }
     
     private func configureNavigationBar() {
         navigationItem.titleView = segmentedControl
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
-        self.navigationController?.navigationBar.items = [navigationItem]
     }
 
     private func configureSegmentedControl() {
@@ -50,6 +48,7 @@ class ViewController: UIViewController {
     }
     
     private func configureTableContainerConstraint(for container: UIView) {
+        container.translatesAutoresizingMaskIntoConstraints = false
         let safeArea = view.safeAreaLayoutGuide
         view.addSubview(container)
         
@@ -63,11 +62,11 @@ class ViewController: UIViewController {
     
     @objc private func changeViewStyle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            tableContainer.isHidden = false
-            collectionContainer.isHidden = true
+            listView.view.isHidden = false
+            collectionView.view.isHidden = true
         } else {
-            tableContainer.isHidden = true
-            collectionContainer.isHidden = false
+            listView.view.isHidden = true
+            collectionView.view.isHidden = false
         }
     }
 }

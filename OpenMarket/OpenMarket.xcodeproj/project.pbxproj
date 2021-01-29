@@ -14,6 +14,8 @@
 		4C5016F025BF276000762FCF /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016EF25BF276000762FCF /* ProductList.swift */; };
 		4C5016F325BF276700762FCF /* OpenMarketError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016F225BF276700762FCF /* OpenMarketError.swift */; };
 		4C5016FD25BF278500762FCF /* OpenMarketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5016FC25BF278500762FCF /* OpenMarketTests.swift */; };
+		4CEF65D425C3EB25007C4C43 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF65D325C3EB25007C4C43 /* ListViewController.swift */; };
+		4CEF65E025C3EC5E007C4C43 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF65DF25C3EC5E007C4C43 /* CollectionViewController.swift */; };
 		C70FB0FB25BEF61C00C9924E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FB0FA25BEF61C00C9924E /* AppDelegate.swift */; };
 		C70FB0FD25BEF61C00C9924E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FB0FC25BEF61C00C9924E /* SceneDelegate.swift */; };
 		C70FB0FF25BEF61C00C9924E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70FB0FE25BEF61C00C9924E /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 		4C5016FA25BF278500762FCF /* OpenMarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenMarketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5016FC25BF278500762FCF /* OpenMarketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMarketTests.swift; sourceTree = "<group>"; };
 		4C5016FE25BF278500762FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CEF65D325C3EB25007C4C43 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		4CEF65DF25C3EC5E007C4C43 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		C70FB0F725BEF61C00C9924E /* OpenMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70FB0FA25BEF61C00C9924E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C70FB0FC25BEF61C00C9924E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				C70FB0FA25BEF61C00C9924E /* AppDelegate.swift */,
 				C70FB0FC25BEF61C00C9924E /* SceneDelegate.swift */,
 				C70FB0FE25BEF61C00C9924E /* ViewController.swift */,
+				4CEF65D325C3EB25007C4C43 /* ListViewController.swift */,
+				4CEF65DF25C3EC5E007C4C43 /* CollectionViewController.swift */,
 				C70FB10025BEF61C00C9924E /* Main.storyboard */,
 				C70FB10325BEF61D00C9924E /* Assets.xcassets */,
 				C70FB10525BEF61D00C9924E /* LaunchScreen.storyboard */,
@@ -259,8 +265,10 @@
 				E268E61825C140EF009A3D7C /* URLRequestManager.swift in Sources */,
 				4C5016EA25BF275200762FCF /* NetworkHandler.swift in Sources */,
 				4C5016F025BF276000762FCF /* ProductList.swift in Sources */,
+				4CEF65D425C3EB25007C4C43 /* ListViewController.swift in Sources */,
 				C70FB0FB25BEF61C00C9924E /* AppDelegate.swift in Sources */,
 				4C5016ED25BF275A00762FCF /* OpenMarketJSONDecoder.swift in Sources */,
+				4CEF65E025C3EC5E007C4C43 /* CollectionViewController.swift in Sources */,
 				E268E60E25C13FE1009A3D7C /* APIType.swift in Sources */,
 				E268E61C25C142DA009A3D7C /* Uploader.swift in Sources */,
 				E268E61225C13FFE009A3D7C /* HTTPMethod.swift in Sources */,
