@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class McokURLSessionDataTask: URLSessionDataTask {
+class MockURLSessionDataTask: URLSessionDataTask {
     override init() { }
     var resumeDidCall: () -> Void = {}
     
@@ -32,9 +32,9 @@ class MockURLSession: URLSessionProtocol {
     }
     
     var makeRequestSuccess = true
-    var apiType = APIType.loadPage(page: 1)
+    var apiRequestType = APIRequestType.loadPage(page: 1)
     var data: Data {
-        switch apiType {
+        switch apiRequestType {
         case .loadPage(page: 1):
             return MockAPI.test.sampleItems.data
         default:
@@ -42,12 +42,12 @@ class MockURLSession: URLSessionProtocol {
         }
     }
     
-    init(makeRequestSuccess: Bool = true, apiType: APIType) {
+    init(makeRequestSuccess: Bool = true, apiRequestType: APIRequestType) {
         self.makeRequestSuccess = makeRequestSuccess
-        self.apiType = apiType
+        self.apiRequestType = apiRequestType
     }
     
-    var sessionDataTask: McokURLSessionDataTask?
+    var sessionDataTask: MockURLSessionDataTask?
     
     func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         
@@ -60,7 +60,7 @@ class MockURLSession: URLSessionProtocol {
                                               statusCode: 410,
                                               httpVersion: "2",
                                               headerFields: nil)
-        let sessionDataTask = McokURLSessionDataTask()
+        let sessionDataTask = MockURLSessionDataTask()
         
         sessionDataTask.resumeDidCall = {
             if self.makeRequestSuccess {
