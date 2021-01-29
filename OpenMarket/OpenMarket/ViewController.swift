@@ -8,7 +8,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     let listView = ListViewController()
-    let collectionView = CollectionViewController()
+    let collectionView = GridViewController()
     let segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl()
         segmentedControl.insertSegment(withTitle: "LIST", at: 0, animated: true)
@@ -30,11 +30,14 @@ final class ViewController: UIViewController {
         addChild(listView)
         addChild(collectionView)
         
+       
         self.view.addSubview(listView.view)
         self.view.addSubview(collectionView.view)
         
         configureConstraintToSafeArea(for: listView.view)
         configureConstraintToSafeArea(for: collectionView.view)
+        
+        collectionView.view.isHidden = true
     }
     
     private func configureNavigationBar() {
@@ -42,7 +45,7 @@ final class ViewController: UIViewController {
         navigationItem.titleView = segmentedControl
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
     }
-
+    
     private func configureSegmentedControl() {
         segmentedControl.addTarget(self, action: #selector(changeViewStyle(_ :)), for: .valueChanged)
     }
@@ -71,5 +74,15 @@ extension UIViewController {
             ojbect.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
         ])
     }
+    
+    func loadPage(number: UInt, completionHandler: @escaping ((Result<ProductList, OpenMarketError>) -> ())) {
+        OpenMarketJSONDecoder<ProductList>.decodeData(about: .loadPage(page: number)) { result in
+            switch result {
+            case .success(let data):
+                completionHandler(.success(data))
+            case .failure(let error):
+                completionHandler(.failure(error))
+            }
+        }
+    }
 }
-
