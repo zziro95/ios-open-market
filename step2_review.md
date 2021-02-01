@@ -30,3 +30,9 @@
 <img width="323" alt="스크린샷 2021-02-01 22 30 09" src="https://user-images.githubusercontent.com/49546979/106472024-9bda5e80-64e5-11eb-933c-20900482f343.png">
 <img width="360" alt="스크린샷 2021-02-01 22 30 00" src="https://user-images.githubusercontent.com/49546979/106472029-9d0b8b80-64e5-11eb-8687-a02f9b87f776.png">
 
+### [3번]
+> 클로저를 이용해서 생성시에 기본 속성을 설정해줄 수도 있습니다. 🦖
+https://docs.swift.org/swift-book/LanguageGuide/Initialization.html
+
+앗, 저희가 논의했던 부분인데요! 실제 현장(?)에서는 클로저를 사용해서 기본 속성을 주는 편인가요?
+클로저로 만들었다가, 위쪽이 너무 헤비해보이고 또 따로 제약을 줘야해서 한번에 하자 하고 내렸는데 실제로는 어떻게 사용하는지 궁금해요.
