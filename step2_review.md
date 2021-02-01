@@ -30,6 +30,14 @@
 <img width="323" alt="스크린샷 2021-02-01 22 30 09" src="https://user-images.githubusercontent.com/49546979/106472024-9bda5e80-64e5-11eb-933c-20900482f343.png">
 <img width="360" alt="스크린샷 2021-02-01 22 30 00" src="https://user-images.githubusercontent.com/49546979/106472029-9d0b8b80-64e5-11eb-8687-a02f9b87f776.png">
 
+
+### [3번]
+> LoadingCell로 데이터를 주고 이에 따라서 셀의 상태나 뷰가 설정되는 방식은 어떻게 생각하시나요? 어떤 장단점이 있을까요?
+
+와우... 이 방법을 생각 못했는데, 해보니까 정말 깔끔하고 좋은거같아요.
+장점은 collectionView(cellForItemAt) 함수가 많은 일을 하고있는 것을 나누어 가질 수 있는 것 같고,
+단점은... tableView에서 확인하기 어렵다...?
+
 ### [3번]
 > 클로저를 이용해서 생성시에 기본 속성을 설정해줄 수도 있습니다. 🦖
 https://docs.swift.org/swift-book/LanguageGuide/Initialization.html
