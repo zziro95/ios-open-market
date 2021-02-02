@@ -26,8 +26,9 @@
 이러한 이유로 섹션을 2개로 나누고, 두번째 섹션을 로딩셀로 처리하였습니다.
 
 #### 현재화면
-<img width="323" alt="스크린샷 2021-02-01 22 30 09" src="https://user-images.githubusercontent.com/49546979/106472024-9bda5e80-64e5-11eb-933c-20900482f343.png">
-<img width="360" alt="스크린샷 2021-02-01 22 30 00" src="https://user-images.githubusercontent.com/49546979/106472029-9d0b8b80-64e5-11eb-8687-a02f9b87f776.png">
+<img width="323" alt="스크린샷 2021-02-01 22 30 09" src="https://user-images.githubusercontent.com/49546979/106472024-9bda5e80-64e5-11eb-933c-20900482f343.png"><img width="360" alt="스크린샷 2021-02-01 22 30 00" src="https://user-images.githubusercontent.com/49546979/106472029-9d0b8b80-64e5-11eb-8687-a02f9b87f776.png">
+<img width="267" alt="스크린샷 2021-02-02 20 45 02" src="https://user-images.githubusercontent.com/49546979/106595905-9d645f00-6597-11eb-994e-72c4b7833478.png"><img width="261" alt="스크린샷 2021-02-02 20 45 07" src="https://user-images.githubusercontent.com/49546979/106595907-9e958c00-6597-11eb-9600-6dc99f9478f1.png">
+
 
 
 ### [3번]
