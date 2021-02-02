@@ -50,3 +50,15 @@ https://docs.swift.org/swift-book/LanguageGuide/Initialization.html
 
 이 어플 내부에서 Int들에는 모두 필요하다고 생각되어서 사용했습니당! 그런데 민디의 이야기를 들으니 고민스럽네요🤦🏻‍♀️
 ViewController를 extension해서 사용하는게 나을것같나용..? 잘 모르겠어요🤨
+
+### [5번]
+> 지금 네트워크가 연결로 오류가 안돼서 확인은 할 수가 없네요. 😿 간단하게 보면 flag 값을 이용해 볼 수도 있을거고, NSCache도 이용해볼 수 있겠네요. 여러가지 방법이 있으니 조금 더 찾아보시고 직접 구현해보셔도 좋습니다 :)
+
+시도를 해볼 때 말씀해주신 방법으로 접근하지는 못했지만, TableView의 insertRows 메서드와 CollectionView의 insertItems 메서드를 이용하여, 전체를 리로드하지 않고 스크롤을 하게될때 추가되는 데이터만큼 셀을 추가하는 방법을 시도하였는데, CollectionView에서는 insertItems를 하지 않아도 자동으로 데이터들이 추가로 표시되는 현상이 있었습니다.
+TableView는 insert,reload,delete와 같은 작업을 하기전후로 beginUpdates, endUpdates메서드를 부르지만 CollectionView에는 그러한 메서드가 없는것을 확인하였습니다.
+TableView는와 CollectionView의 동작방식에 대해 좀 더 깊게 알아봐야할 것 같다고 생각이 들었고, 좀 더 많은 시간 투자가 필요해보여 Step1에서의 패키지 만드는것과 같이 프로젝트 마무리단계에 다시 보려고 합니다.ㅠㅜ
+
+
+
+
+
