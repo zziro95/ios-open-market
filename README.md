@@ -74,7 +74,7 @@ func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URL
     - 그렇다면 그에 매칭할 모델 타입을 만들어 주는 건 당연하지만 같은 구조의 디코딩 메서드가 쌓이게 됩니다.
     - 서로 다른 모델 타입이 `10~100`개가 있다면 같은 구조지만 어떤 타입을 디코딩 해주고 리턴해주는지만 다른 메서드들이 중복되게 될 것입니다.
     - 이를 어떻게 해결해야 할지 고민해 보았습니다.   
-    - 아래의 코드는 제네릭을 이용하여 해결하기 전 코드이며 제네릭을 사용하지 않는다면 decodeData()와 같은 구조의 메서드가 여러 개 생기며 같은 구조의 코드가 중복됩니다.
+    - 아래의 코드는 제네릭을 이용하여 해결하기 전 코드이며 제네릭을 사용하지 않는다면 `decodeData()`와 같은 구조의 메서드가 여러 개 생기며 같은 구조의 코드가 중복됩니다.
 ```swift
 struct ProductJSONDecoder {
     static let decoder = JSONDecoder()
